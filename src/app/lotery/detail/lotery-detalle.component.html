@@ -1,0 +1,32 @@
+
+<div class="card">
+    <div class="card-header">
+        {{titulo}}
+    </div>
+    <div class="card-block">
+        <form class="novalidate" [formGroup]="form">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                <div *ngIf="form.controls.name.errors && form.controls.name.touched">
+                    <div *ngIf="form.controls.name.errors.required" class="alert alert-danger">
+                        El campo es requerido
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="emission_time">Tiempo</label>
+                <input type="number" class="form-control" id="emission_time" formControlName="emission_time">
+                <div *ngIf="form.controls.emission_time.errors && form.controls.emission_time.touched">
+                    <div *ngIf="form.controls.emission_time.errors.required" class="alert alert-danger">
+                        El campo es requerido
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" (click)="guardarInventario()" [disabled]="!form.valid">Guardar</button>
+            <button class="btn btn-default" (click)="limpiarFormulario()">Limpiar</button>
+        </form>
+    </div>
+
+</div>

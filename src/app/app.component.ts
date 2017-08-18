@@ -16,12 +16,12 @@ export class AppComponent {
       routerLink: 'user'
     },
     {
-      name: 'Lotery',
+      name: 'Prints',
       avatar: 'svg-12',
       routerLink: 'lotery'
     },
     {
-      name: 'Ticket',
+      name: 'Documents',
       avatar: 'svg-13',
       routerLink: 'ticket'
     },    
